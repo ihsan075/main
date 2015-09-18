@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>${title}</title>
+   <title>${title}</title>
   <meta name="description" content="${content.description!""}" />
   <meta name="keywords" content="${content.keywords!""}" />
 
