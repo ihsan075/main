@@ -21,9 +21,9 @@ h6 {
   font-weight: 700;
 }
 
-h1.dark, h3.dark{
+/*h1.dark, h3.dark{
   color: black;
-}
+}*/
 
 .topnav {
   font-size: 14px;
@@ -39,7 +39,7 @@ h1.dark, h3.dark{
   padding-bottom: 50px;
   text-align: center;
   color: #f8f8f8;
-  background: url(intro-bg.jpg) no-repeat center center;
+  background: url(jaguar_2.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -89,7 +89,7 @@ h1.dark, h3.dark{
   }
 }
 
-.network-name {
+.promo-button {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 400;
@@ -99,8 +99,12 @@ h1.dark, h3.dark{
 .component-section {
   padding: 50px 0;
   background-color: #f8f8f8;
+  /*background-color: white;*/
 }
 
+.component-section.bg-darker{
+  background-color: #eeeeee;
+}
 
 .section-heading {
   margin-bottom: 30px;
@@ -112,51 +116,16 @@ h1.dark, h3.dark{
   border-top: 3px solid #e7e7e7;
 }
 
+.component-section.bg-darker .section-heading-spacer{
+  background-color: #c1c3c3;
+  border-top: 3px solid #c1c3c3;
+}
+
 .banner {
   padding: 100px 0;
   color: #f8f8f8;
   background: url(banner-code.png) no-repeat center center;
   background-size: cover;
-}
-
-.banner h2 {
-  margin: 0;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-  font-size: 3em;
-}
-
-.banner ul {
-  margin-bottom: 0;
-}
-
-.banner-social-buttons {
-  float: right;
-  margin-top: 0;
-}
-
-@media(max-width:1199px) {
-  ul.banner-social-buttons {
-    float: left;
-    margin-top: 15px;
-  }
-}
-
-@media(max-width:767px) {
-  .banner h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
-  }
-
-  ul.banner-social-buttons > li {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-
-  ul.banner-social-buttons > li:last-child {
-    margin-bottom: 0;
-  }
 }
 
 footer {
