@@ -1,0 +1,5 @@
+templateScript: /one-pager-module/templates/pages/main.ftl
+renderType: freemarker
+visible: true
+title: One pager template
+dialog: one-pager-module:pages/main

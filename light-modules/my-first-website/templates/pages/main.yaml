@@ -1,5 +1,0 @@
-templateScript: /my-first-website/templates/pages/main.ftl
-renderType: freemarker
-visible: true
-title: Main template ... ...
-dialog: my-first-website:pages/main 

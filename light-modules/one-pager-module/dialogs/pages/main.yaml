@@ -2,15 +2,22 @@ form:
   tabs:
     - name: tabText
       label: Texts
+      description:
       fields:
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Title
-        - name: introText
-          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
-          label: Introduction text
+        - name: subTitle
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Sub title
+    # - name: imageTab
+    #   label: BG image
+    #   fields:
+    #     - name:
+    # 3 "static" buttons
     - name: tabMeta
       label: Meta
+      description: Edit meta information for the seo relevant tags keywords and description.
       fields:
         - name: keywords
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
@@ -22,8 +29,4 @@ form:
           i18n: true
           label: Description
           rows: 5
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
+actions: !include /one-pager-module/dialogs/common/default-dialog-actions.yaml
