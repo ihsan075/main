@@ -38,9 +38,8 @@ h6 {
   padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
   padding-bottom: 50px;
   text-align: center;
+  background-color: #5e5e5e;
   color: #f8f8f8;
-  background: url(jaguar_2.jpg) no-repeat center center;
-  background-size: cover;
 }
 
 .intro-message {
@@ -124,13 +123,6 @@ h6 {
 .between-car-spacer{
   height: 20px;
 }
-
-/*.banner {
-  padding: 100px 0;
-  color: #f8f8f8;
-  background: url(banner-code.png) no-repeat center center;
-  background-size: cover;
-}*/
 
 .row.car h3{
   margin-top: 0;
