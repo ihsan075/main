@@ -33,7 +33,7 @@
                 background-size: cover;
             }
             [/#if]
-        [/#if]
+        [/#if][#-- eof: introBgImage --]
     </style>
 </head>
 
