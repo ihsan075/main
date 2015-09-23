@@ -13,4 +13,7 @@ areas:
         id: one-pager-module:components/link-button
   content-sections:
     renderType: freemarker
-#    availableComponents:
+    availableComponents:
+      content-items-list:
+        id: one-pager-module:components/content-items-list
+

@@ -1,0 +1,30 @@
+form:
+  tabs:
+    - name: tabText
+      label: Texts
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+        - name: sectionName
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Section nav label
+          required: true
+          requiredErrorMessage: Enter label for section navigation.
+        - name: subText
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Sub title
+    - name: contentSelectionTab
+      label: Content items
+      fields:
+        - name: productRef
+          label: Select product folder
+          required: true
+          requiredErrorMessage: You must select a product item folder which contains a list of products!
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: products
+          appName: products
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+actions: !include /one-pager-module/dialogs/common/default-dialog-actions.yaml
