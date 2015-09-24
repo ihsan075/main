@@ -8,8 +8,8 @@
     [/#if]
 [/#macro]
 
-<a name="[@getSectionName rawSectionName=content.sectionName!""/]"></a>
-<div class="component-section">
+[#--<a name="[@getSectionId rawSectionName=content.sectionName!""/]"></a>--]
+<div class="component-section" id="[@getSectionId rawSectionName=content.sectionName!""/]">
     <div class="container">
         [#--title, subText--]
         <div class="row">

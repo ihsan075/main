@@ -1,3 +1,4 @@
+[#include "/one-pager-module/templates/common/common-macros.ftl"]
 [#assign title = content.title!"Welcome to Erics cars page :-)"]
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +43,6 @@
     [#--Navigation--]
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
-        [#--Brand and toggle get grouped for better mobile display--]
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
@@ -53,23 +53,15 @@
                 </button>
                 <a class="navbar-brand topnav" href="#">Home</a>
             </div>
-        [#--Collect the nav links, forms, and other content for toggling    --]
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#intro">Intro</a>
-                    </li>
-                    <li>
-                        <a href="#">...</a>
-                    </li>
-                </ul>
+                [#--top-nav--]
+                [@createSectionNav page=content areaName="content-sections" type="top" /]
             </div>
         </div>
     </nav>
 
-
-    <a name="intro"></a>
-    <div class="intro-section">
+    [#--<a name="intro"></a>--]
+    <div class="intro-section" id="intro">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -95,19 +87,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#intro">Intro</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#more">...</a>
-                        </li>
-                    </ul>
+                    [#--footer-nav--]
+                    [@createSectionNav page=content areaName="content-sections" type="bottom" /]
                     <p class="copyright text-muted small">copyleft by Eric the Viking :-)
                     </p>
                 </div>
