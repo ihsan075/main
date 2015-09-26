@@ -17,13 +17,13 @@
 --]
 [#macro createSectionNav page areaName="content-sections" type="top"]
      <ul class="[#if type=="top"]nav navbar-nav navbar-right[#else]list-inline[/#if]">
-         [#if type!="top"]<li><a href="#">Home</a></li>[#else]<li><a href="#">Intro</a></li>[/#if]
+         [#if type!="top"]<li><a class="page-scroll" href="#intro">Home</a></li>[#else]<li><a class="page-scroll" href="#intro">Intro</a></li>[/#if]
          [#--[#assign contentSectionsArea = cmsfn.contentByPath(page.@path+"/"+areaName) /]--]
          [#if cmsfn.contentByPath(page.@path+"/"+areaName)??]
              [#list cmsfn.children(cmsfn.contentByPath(page.@path+"/"+areaName), "mgnl:component") as compoment]
                 [#if "" != compoment.sectionName!""]
                     [#if type!="top"]<li class="footer-menu-divider">&sdot;</li>[/#if]
-                    <li><a href="#[@getSectionId rawSectionName=compoment.sectionName!""/]">${compoment.sectionName!}</a></li>
+                    <li><a class="page-scroll" href="#[@getSectionId rawSectionName=compoment.sectionName!""/]">${compoment.sectionName!}</a></li>
                 [/#if]
              [/#list]
          [/#if]

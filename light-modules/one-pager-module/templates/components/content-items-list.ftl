@@ -8,7 +8,6 @@
     [/#if]
 [/#macro]
 
-[#--<a name="[@getSectionId rawSectionName=content.sectionName!""/]"></a>--]
 <div class="component-section" id="[@getSectionId rawSectionName=content.sectionName!""/]">
     <div class="container">
         [#--title, subText--]
