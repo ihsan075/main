@@ -28,6 +28,13 @@
                         [#assign productsList = cmsfn.children(parentItem, "mgnl:product")]
                         [#if cmsfn.children(parentItem, "mgnl:product")?has_content]
                             [#list productsList as product]
+
+                            [#assign asset = damfn.getAsset(product.image!"") /]
+
+                            [#assign productTitle = product.@name!"" /]
+                            [#--TODO: find proper way to get asset@name--]
+                            [#--[#if asset?? && asset.getName()??][#assign productTitle = asset.getName()!"" /][/#if]--]
+
                                 <div class="row car">
                                     <div class="col-xs-6">
                                         <div class="big-box">
@@ -36,7 +43,7 @@
                                     </div>
                                     <div class="col-xs-6">
                                         <div class="row">
-                                            <div class="col-xs-12"><h3>${product.@name!""}</h3></div>
+                                            <div class="col-xs-12"><h3>${productTitle}</h3></div>
                                             <div class="col-xs-12">
                                                 [#if product.description?has_content]${cmsfn.decode(product).description}[/#if]
                                             </div>
