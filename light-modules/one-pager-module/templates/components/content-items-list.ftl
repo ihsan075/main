@@ -1,4 +1,3 @@
-[#include "/one-pager-module/templates/common/common-macros.ftl"]
 [#macro renderCarImage imgItemKey altText]
     [#if imgItemKey??]
         [#assign imgRef = damfn.getAssetLink(imgItemKey)!]
@@ -28,13 +27,10 @@
                         [#assign productsList = cmsfn.children(parentItem, "mgnl:product")]
                         [#if cmsfn.children(parentItem, "mgnl:product")?has_content]
                             [#list productsList as product]
-
                             [#assign asset = damfn.getAsset(product.image!"") /]
-
                             [#assign productTitle = product.@name!"" /]
                             [#--TODO: find proper way to get asset@name--]
                             [#--[#if asset?? && asset.getName()??][#assign productTitle = asset.getName()!"" /][/#if]--]
-
                                 <div class="row car">
                                     <div class="col-xs-6">
                                         <div class="big-box">
