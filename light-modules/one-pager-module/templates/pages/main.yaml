@@ -16,4 +16,8 @@ areas:
     availableComponents:
       content-items-list:
         id: one-pager-module:components/content-items-list
+#      textImage:
+#        id: mte:components/textImage
+      textImage:
+        id: one-pager-module:components/textImage
 

@@ -1,0 +1,13 @@
+templateScript: /one-pager-module/templates/components/textImage.ftl
+dialog: mte:components/textImage
+modelClass: info.magnolia.templating.models.components.ImageModel
+
+renderType: freemarker
+i18nBasename: info.magnolia.templating.models.messages
+title: components.textImage.label
+description: components.textImage.description
+
+parameters:
+# the variation used below comes from travel site.
+  imageVariation: large-16x9
+
