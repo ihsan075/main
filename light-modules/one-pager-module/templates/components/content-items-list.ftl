@@ -8,7 +8,7 @@
     [/#if]
 [/#macro]
 
-<div class="component-section" id="[@getSectionId rawSectionName=content.sectionName!""/]">
+<div class="component-section" id="${content.@uuid}">
     <div class="container">
         [#--title, subText--]
         <div class="row">
