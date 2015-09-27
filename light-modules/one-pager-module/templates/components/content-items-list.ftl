@@ -31,7 +31,7 @@
                             [#assign productTitle = product.@name!"" /]
                             [#--TODO: find proper way to get asset@name--]
                             [#--[#if asset?? && asset.getName()??][#assign productTitle = asset.getName()!"" /][/#if]--]
-                                [#assign productTitle = asset.title!"" /]
+                                [#--[#assign productTitle = asset.title!"" /]--]
                                 <div class="row car">
                                     <div class="col-xs-6">
                                         <div class="big-box">
