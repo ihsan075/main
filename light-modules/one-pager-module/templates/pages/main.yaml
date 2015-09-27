@@ -20,4 +20,6 @@ areas:
 #        id: mte:components/textImage
       textImage:
         id: one-pager-module:components/textImage
+      textImage-bs:
+        id: one-pager-module:components/Cre
 
