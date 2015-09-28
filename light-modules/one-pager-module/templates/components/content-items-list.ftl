@@ -7,6 +7,31 @@
     [/#if]
 [/#macro]
 
+
+[#--
+The drama how to render the property "name" of an asset.
+--]
+[#macro assetNameBrainFuck assetRef]
+    <div>
+    [#if assetRef??]
+        [#assign asset = damfn.getAsset(assetRef) /]
+        [#if asset??]
+            asset.name = ${asset.name!""}<br/>
+            [#assign assetMap = damfn.getAssetMap(asset)]
+            assetMap.name = ${assetMap.name!""}<br/>
+            [#--asset.getItemKey().getAssetId() = ${asset.getItemKey().getAssetId()}<br/>--]
+            [#assign damJcrNode = cmsfn.asJCRNode(cmsfn.contentById(asset.getItemKey().getAssetId(), "dam")) /]
+            [#if damJcrNode??]
+                damJcrNode@name =  ${damJcrNode.getProperty("name").getString()}<br/>
+            [#else]
+                no damJcrNode<br/>
+            [/#if]
+
+        [/#if]
+    [/#if]
+    </div>
+[/#macro]
+
 <div class="component-section" id="${content.@uuid}">
     <div class="container">
         [#--title, subText--]
@@ -50,6 +75,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-sm-12">
                                         <div class="between-car-spacer"></div>
+                                        [@assetNameBrainFuck assetRef=product.image!""/]
                                     </div>
                                 </div>
                             [/#list]
