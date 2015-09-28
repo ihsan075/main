@@ -21,5 +21,5 @@ areas:
       textImage:
         id: one-pager-module:components/textImage
       textImage-bs:
-        id: one-pager-module:components/Cre
+        id: one-pager-module:components/textImage-bs
 
