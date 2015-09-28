@@ -73,7 +73,7 @@
                 <a class="navbar-brand topnav" href="#intro">Home</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                [#--top-nav--]
+                [#--dynamic part of top-nav--]
                 [@createSectionNav page=content areaName="content-sections" type="top" /]
             </div>
         </div>
@@ -108,8 +108,7 @@
                 <div class="col-lg-12">
                     [#--footer-nav--]
                     [@createSectionNav page=content areaName="content-sections" type="bottom" /]
-                    <p class="copyright text-muted small">copyleft by Eric the Viking :-)
-                    </p>
+                    <div class="copyright">[#if content.copyrightNote??]${cmsfn.decode(content).copyrightNote}[/#if]</div>
                 </div>
             </div>
         </div>

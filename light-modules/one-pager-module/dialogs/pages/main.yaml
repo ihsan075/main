@@ -10,6 +10,10 @@ form:
         - name: subTitle
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           label: Sub title
+        - name: copyrightNote
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Copyright note
+
     - name: tabBgImage
       label: Bg image
       description: Background image of the intro section
