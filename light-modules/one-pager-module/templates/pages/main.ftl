@@ -59,7 +59,7 @@
 </head>
 
 <body>
-    [#--Navigation--]
+    [#--top navigation--]
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
             <div class="navbar-header">
@@ -78,6 +78,7 @@
             </div>
         </div>
     </nav>
+    [#--eof: top navigation--]
 
     <div class="intro-section" id="intro">
         <div class="container">
@@ -113,6 +114,7 @@
             </div>
         </div>
     </footer>
+    [#--eof: Footer--]
 
     [#--jquery and bootstrap js--]
     <script src="${ctx.contextPath}/.resources/one-pager-module/webresources/bootstrap-3.3.5/jquery.js"></script>
