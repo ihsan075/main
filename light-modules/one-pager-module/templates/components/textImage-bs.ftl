@@ -1,5 +1,5 @@
 [#macro renderText content]
-    <div class="col-lg-4 col-sm-6">
+    <div class="col-lg-5 col-sm-6">
         <hr class="section-heading-spacer">
         <div class="clearfix"></div>
         <h2 class="section-heading">${content.headline!""}</h2>
@@ -8,7 +8,7 @@
 [/#macro]
 
 [#macro renderImage content model def]
-    <div class="col-lg-4 col-sm-6">
+    <div class="col-lg-6 col-sm-6">
     [#if model.image?exists]
         [#include "/mte/templates/macros/image.ftl"]
         <div class="big-box">
