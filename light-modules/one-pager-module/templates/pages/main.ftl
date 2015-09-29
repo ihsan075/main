@@ -97,9 +97,7 @@
     </div>
     [#--eof: intro-section--]
 
-
     [@cms.area name="content-sections"/]
-
 
     [#--Footer--]
     <footer>
