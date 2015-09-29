@@ -22,4 +22,5 @@ areas:
         id: one-pager-module:components/textImage
       textImage-bs:
         id: one-pager-module:components/textImage-bs
+# eof: areas
 
