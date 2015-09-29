@@ -28,7 +28,6 @@ The drama how to render the property "name" of an asset.
             [#else]
                 no damJcrNode<br/>
             [/#if]
-
         [/#if]
     [/#if]
     </div>
