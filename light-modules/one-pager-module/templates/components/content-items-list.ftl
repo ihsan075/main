@@ -17,6 +17,8 @@ The drama how to render the property "name" of an asset.
         [#assign asset = damfn.getAsset(assetRef) /]
         [#if asset??]
             asset.name = ${asset.name!""}<br/>
+            asset.class.name = ${asset.class.name!""}<br/>
+            asset.node.name = ${asset.node.name!""}<br/>
             [#assign assetMap = damfn.getAssetMap(asset)]
             assetMap.name = ${assetMap.name!""}<br/>
             [#--asset.getItemKey().getAssetId() = ${asset.getItemKey().getAssetId()}<br/>--]
