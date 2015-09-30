@@ -1,6 +1,6 @@
 [#macro renderCarImage imgItemKey altText]
     [#if imgItemKey??]
-        [#assign imgRef = damfn.getAssetLink(imgItemKey)!]
+        [#assign imgRef = damfn.getAssetLink(imgItemKey, "large")!]
         [#if imgRef??]
         <img class="img-responsive img-rounded" src="${imgRef}" alt="${altText}">
         [/#if]

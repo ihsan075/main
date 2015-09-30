@@ -2,5 +2,4 @@ templateScript: /one-pager-module/templates/components/content-items-list.ftl
 dialog: one-pager-module:components/content-items-list
 renderType: freemarker
 title: Content app items list
-# ---
 

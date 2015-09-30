@@ -47,7 +47,7 @@
     <style>
         [#assign bgImgItemKey = content.introBgImage!]
         [#if bgImgItemKey??]
-            [#assign imgRef = damfn.getAssetLink(bgImgItemKey)!]
+            [#assign imgRef = damfn.getAssetLink(bgImgItemKey, "xxlarge ")!]
             [#if imgRef??]
             .intro-section {
                 background: url(${imgRef}) no-repeat center center;
