@@ -86,10 +86,8 @@
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1 class="dark">${title}</h1>
-                    [#if content.subTitle?has_content]<h3>${content.subTitle}</h3>[/#if]
+                        [#if content.subTitle?has_content]<h3>${content.subTitle}</h3>[/#if]
                         <hr class="intro-divider">
-                    [#--buttons--]
-                    [@cms.area name="intro-buttons"/]
                     </div>
                 </div>
             </div>

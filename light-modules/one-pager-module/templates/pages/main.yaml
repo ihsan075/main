@@ -4,20 +4,11 @@ visible: true
 title: One pager template
 dialog: one-pager-module:pages/main
 areas:
-  intro-buttons:
-    templateScript: /one-pager-module/templates/areas/intro-buttons-area.ftl
-    renderType: freemarker
-    maxComponents: 3
-    availableComponents:
-      link-button:
-        id: one-pager-module:components/link-button
   content-sections:
     renderType: freemarker
     availableComponents:
       content-items-list:
         id: one-pager-module:components/content-items-list
-#      textImage:
-#        id: mte:components/textImage
       textImage:
         id: one-pager-module:components/textImage
       textImage-bs:
