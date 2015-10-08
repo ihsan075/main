@@ -17,7 +17,7 @@ form:
     - name: contentSelectionTab
       label: Content items
       fields:
-        - name: productRef
+        - name: productFolderRef
           label: Select product folder
           required: true
           requiredErrorMessage: You must select a product item folder which contains a list of products!

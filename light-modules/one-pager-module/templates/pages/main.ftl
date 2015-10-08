@@ -4,15 +4,30 @@
  - Param areaName: the name of the area node which contains the content-section components.
  - Param type: "top" or "bottom".
 --]
-[#macro createSectionNav page areaName="content-sections" type="top"]
-<ul class="[#if type=="top"]nav navbar-nav navbar-right[#else]list-inline[/#if]">
-    [#if type!="top"]<li><a class="page-scroll" href="#intro">Home</a></li>[#else]<li><a class="page-scroll" href="#intro">Intro</a></li>[/#if]
-    [#if cmsfn.contentByPath(page.@path+"/"+areaName)??]
+[#macro createSectionNav page areaName="content-sections" type="top" ]
+
+[#assign ulClass = "default-ul-class" ]
+[#assign isTop = false ]
+[#if type=="top"]
+    [#assign ulClass = "nav navbar-nav navbar-right" ]
+    [#assign isTop = true ]
+[#elseif type=="bottom"]
+    [#assign ulClass = "list-inline" ]
+[/#if]
+
+<ul class="${ulClass}">
+    [#if isTop]
+        <li><a class="page-scroll" href="#intro">Home</a></li>
+    [#else]
+        <li><a class="page-scroll" href="#intro">Intro</a></li>
+    [/#if]
+
+    [#if cmsfn.contentByPath(page.@path+"/"+areaName)?exists]
         [#list cmsfn.children(cmsfn.contentByPath(page.@path+"/"+areaName), "mgnl:component") as compoment]
-            [#assign navTitle = compoment.sectionName!compoment.headline!""/]
-            [#if navTitle!=""]
-                [#if type!="top"]<li class="footer-menu-divider">&sdot;</li>[/#if]
-                <li><a class="page-scroll" href="#${compoment.@uuid}">${compoment.sectionName!compoment.headline!"???"}</a></li>
+            [#assign navTitle = compoment.sectionName!compoment.headline!/]
+            [#if navTitle?has_content]
+                [#if !isTop]<li class="footer-menu-divider">&sdot;</li>[/#if]
+                <li><a class="page-scroll" href="#${compoment.@uuid}">${compoment.sectionName!compoment.headline!compoment.@uuid}</a></li>
             [/#if]
         [/#list]
     [/#if]
@@ -45,12 +60,11 @@
     <![endif]-->
     [@cms.page /]
     <style>
-        [#assign bgImgItemKey = content.introBgImage!]
-        [#if bgImgItemKey??]
-            [#assign imgRef = damfn.getAssetLink(bgImgItemKey, "xxlarge ")!]
-            [#if imgRef??]
+        [#if content.introBgImage?has_content]
+            [#assign assetRendition = damfn.getRendition(content.introBgImage, "xxlarge")! /]
+            [#if assetRendition?has_content]
             .intro-section {
-                background: url(${imgRef}) no-repeat center center;
+                background: url(${assetRendition.getLink()}) no-repeat center center;
                 background-size: cover;
             }
             [/#if]
@@ -86,7 +100,9 @@
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1 class="dark">${title}</h1>
-                        [#if content.subTitle?has_content]<h3>${content.subTitle}</h3>[/#if]
+                        [#if content.subTitle?has_content]
+                            <h3>${content.subTitle}</h3>
+                        [/#if]
                         <hr class="intro-divider">
                     </div>
                 </div>
@@ -104,7 +120,7 @@
                 <div class="col-lg-12">
                     [#--footer-nav--]
                     [@createSectionNav page=content areaName="content-sections" type="bottom" /]
-                    <div class="copyright">[#if content.copyrightNote??]${cmsfn.decode(content).copyrightNote}[/#if]</div>
+                    [#if content.copyrightNote?has_content]<div class="copyright">${cmsfn.decode(content).copyrightNote}</div>[/#if]
                 </div>
             </div>
         </div>
