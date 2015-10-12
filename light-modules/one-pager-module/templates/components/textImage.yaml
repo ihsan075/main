@@ -1,0 +1,5 @@
+templateScript: /one-pager-module/templates/components/textImage.ftl
+renderType: freemarker
+title: Text with image
+dialog: one-pager-module:components/textImage
+
