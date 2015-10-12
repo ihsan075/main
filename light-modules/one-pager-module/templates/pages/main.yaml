@@ -9,7 +9,7 @@ areas:
     availableComponents:
       content-items-list:
         id: one-pager-module:components/content-items-list
-      textImage-bs:
-        id: one-pager-module:components/textImage-bs
+      textImage:
+        id: one-pager-module:components/textImage
 # eof: areas
 

@@ -1,0 +1,57 @@
+form:
+  label: Text with image
+  tabs:
+    - name: tabText
+      label: Texts
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+        - name: sectionName
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Section nav label
+          required: true
+          requiredErrorMessage: Enter label for section navigation.
+        - name: subText
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Sub title
+    - name: imageTab
+      label: Image
+      fields:
+        - name: imagePosition
+          label: Position
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          options:
+            - name: left
+              label: left
+              value: left
+              selected: true
+            - name: right
+              label: right
+              value: right
+        - name: imageStyle
+          label: Style
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          options:
+            - name: roundedEdges
+              label: Rounded edges
+              value: roundedEdges
+              selected: true
+            - name: circle
+              label: Circle
+              value: circle
+            - name: rectangular
+              label: Rectangular
+              value: rectangular
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+          label: Image
+
+
+actions: !include /one-pager-module/dialogs/common/default-dialog-actions.yaml

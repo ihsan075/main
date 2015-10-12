@@ -1,13 +1,3 @@
-[#-- todo: think about getting rid of this macro ... more comments  --]
-[#macro renderCarImage imgItemKey altText="alt text"]
-    [#if imgItemKey?has_content]
-        [#assign imgRef = damfn.getAssetLink(imgItemKey, "large")!]
-        [#if imgRef?has_content]
-        <img class="img-responsive img-rounded" src="${imgRef}" alt="${altText}">
-        [/#if]
-    [/#if]
-[/#macro]
-
 <div class="component-section" id="${content.@uuid}">
     <div class="container">
     [#--title, subText--]
@@ -34,7 +24,12 @@
                                 <div class="row car">
                                     <div class="col-xs-6">
                                         <div class="big-box">
-                                            [@renderCarImage imgItemKey=product.image! altText=productTitle!/]
+                                            [#if product.image?has_content]
+                                                [#assign imgRef = damfn.getAssetLink(product.image, "large")!]
+                                                [#if imgRef?has_content]
+                                                    <img class="img-responsive img-rounded" src="${imgRef}" alt="${productTitle!}">
+                                                [/#if]
+                                            [/#if]
                                         </div>
                                     </div>
                                     <div class="col-xs-6">
