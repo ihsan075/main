@@ -7,7 +7,6 @@
 </div>
 [/#macro]
 
-
 [#macro renderImage content]
 <div class="col-lg-6 col-sm-6">
     <div class="big-box">
@@ -26,8 +25,6 @@
     </div>
 </div>
 [/#macro]
-
-
 
 <div class="component-section" id="${content.@uuid}">
     <div class="container">
