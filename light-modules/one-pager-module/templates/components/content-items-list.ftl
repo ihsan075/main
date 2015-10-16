@@ -31,6 +31,9 @@
                                                 [/#if]
                                             [/#if]
                                         </div>
+                                        [#if asset.getCopyright()?has_content]
+                                            <div class="copyright">© ${asset.getCopyright()}</div>
+                                        [/#if]
                                     </div>
                                     <div class="col-xs-6">
                                         <div class="row">

@@ -144,3 +144,9 @@ footer {
 p.copyright {
   margin: 15px 0 0;
 }
+
+.car .copyright{
+  margin-top: 5px;
+  color: #444444;
+  font-size: 12px;
+}
